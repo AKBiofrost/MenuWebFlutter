@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        primarySwatch: Colors.deepPurple,
+        primarySwatch: Colors.deepOrange,
       ),
       home: Home(),
     );
@@ -80,7 +80,7 @@ class _HiddenDrawerState extends State<HiddenDrawer> {
 
     return HiddenDrawerMenu(
         screens: _page,
-        backgroundColorMenu: Colors.deepPurpleAccent.shade400 ,
+        backgroundColorMenu: Colors.deepOrange ,
         initPositionSelected: 0,
       slidePercent: 35,
       contentCornerRadius: 40,
