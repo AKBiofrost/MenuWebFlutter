@@ -22,21 +22,71 @@ int _selectedIndex=0;
     });
   }
 
+  final List <Widget> _pages=[
+   Center(
+        child: Column(
+        children: [
+        SizedBox(height: 25,),
+
+    Text('Home',
+      style: TextStyle(
+        fontWeight: FontWeight.bold,
+        fontSize: 32,
+      ),
+    ),
+
+]
+    )
+
+),
+
+Center(
+child: Column(
+children: [
+SizedBox(height: 25,),
+
+Text('mensajes',
+style: TextStyle(
+fontWeight: FontWeight.bold,
+fontSize: 32,
+),
+),
+
+]
+)
+),  Center(
+child: Column(
+children: [
+SizedBox(height: 25,),
+
+Text('persona',
+style: TextStyle(
+fontWeight: FontWeight.bold,
+fontSize: 32,
+),
+),
+
+]
+)
+)
+
+  ];
+
+
   @override
 
   Widget build(BuildContext context){
 
     return  Scaffold(
-      body: Center(
-      child: Text('segunda  pagina'),
-    ),
+      body: _pages[_selectedIndex],
       backgroundColor: Colors.white,
 
       bottomNavigationBar: BottomNavigationBar(
+
         currentIndex: _selectedIndex,
         type:BottomNavigationBarType.fixed,
         onTap: _navigateBottombar,
-        items:[
+        items:const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'principal',
